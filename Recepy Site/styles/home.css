@@ -166,6 +166,7 @@ h2 {
   font-size: 25px;
   border-radius: 15px;
   border: 0px;
+  cursor: pointer;
 }
 #searching > #left:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -188,9 +189,12 @@ h2 {
   /* color:wheat; */
   margin-left: 80px;
   border-radius: 20px;
+  cursor: pointer;
 }
 #right:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: black;
+  color: white;
 }
 #right > div:nth-child(1) {
   display: flex;
