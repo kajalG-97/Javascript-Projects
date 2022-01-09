@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUTUBE Search Videos</title>
+    <link rel="stylesheet" href="styles/showVedio.css">
+  </head>
+  <body>
+    <div id="navdiv">
+      <div id="leftnav">
+        <img
+          id="img"
+          src="https://img.icons8.com/fluency-systems-regular/50/ffffff/menu.png"
+        />
+
+        <img
+          src="https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"
+          alt=""
+        />
+        <h1>YouTube</h1>
+      </div>
+
+      <div id="input_div">
+        <input type="text" id="video" placeholder="Search" />
+        <button onclick="searchVideo()">
+          <img
+            src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-ui-dreamstale-lineal-dreamstale.png"
+          />
+        </button>
+        <div id="sdiv">
+          <img
+            id="mike"
+            src="https://img.icons8.com/material-sharp/34/ffffff/microphone--v1.png"
+          />
+        </div>
+      </div>
+      <div class="right">
+        <img
+          src="https://img.icons8.com/windows/24/ffffff/video-call--v1.png"
+        />
+        <img src="https://img.icons8.com/ios/24/ffffff/squared-menu.png" />
+        <img
+          src="https://img.icons8.com/material-rounded/24/ffffff/alarm.png"
+        />
+        <img
+          id="profile"
+          src="https://yt3.ggpht.com/yti/APfAmoGuxa61E23lopKErB4z_MAyuzraqT29HuNKkWRr=s88-c-k-c0x00ffffff-no-rj-mo"
+          alt=""
+        />
+      </div>
+    </div>
+    <div id="container">
+      <div id="playing_video"></div>
+      <div id="recommend_video"></div>
+    </div>
+  </body>
+</html>
+<script src="scripts/searchVideo.js"></script>

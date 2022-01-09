@@ -1,0 +1,96 @@
+.imgError {
+  width: 50%;
+}
+#pic {
+  width: 30%;
+  height: 100px;
+}
+.divv {
+  width: auto;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: rgb(26, 25, 25);
+}
+.divv > img {
+  width: 100%;
+}
+.divv > div {
+  display: flex;
+  justify-content: space-around;
+  line-height: 10px;
+  font-size: 25px;
+
+  font-weight: bold;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+input {
+  width: 480px;
+
+  background: transparent;
+  font-size: 25px;
+  color: honeydew;
+  margin-left: 30px;
+}
+input:focus {
+  outline: none;
+  border: 0px;
+  border-bottom: 1px solid gray;
+}
+#moviesDiv {
+  height: 400px;
+  width: 500px;
+  border: 0px;
+  border-top: none;
+  overflow: auto;
+  color: white;
+
+  margin-left: 30px;
+}
+body {
+  background: black;
+  color: rgb(219, 164, 219);
+}
+#moviesDiv > div {
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+#moviesDiv > div > img {
+  width: 150px;
+  height: 150px;
+}
+#myContainer {
+  display: flex;
+}
+#displayDiv {
+  margin-left: 80px;
+}

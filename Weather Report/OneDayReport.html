@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     /* body{
+       background-image: url("https://i.pinimg.com/736x/fd/00/98/fd00984025b813f8da694ca720b39111.jpg");
+     } */
+      input {
+        font-size: 25px;
+        color: blue;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        border: 0px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 10px 20px;
+      }
+      button {
+        margin-left: 20px;
+        border-radius: 15px;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: skyblue;
+        border: transparent;
+        cursor: pointer;
+        padding: 15px 30px;
+      }
+      #container > div>div{
+        display: flex;
+       margin-top: 20px;
+        width:400px;
+        justify-content: space-between;
+         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding:5px 15px;
+        border-radius: 10px;
+      }
+      #container> div>div>img {
+        width:fit-content;
+      }
+      #container > div{
+        margin-top: 80px;
+        margin-left: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        /* color:white */
+      }
+      #main{
+        display: flex;
+        
+        width:90%;
+        justify-content: space-evenly;
+        margin:auto;
+      }
+      #map{
+        margin-top:81px;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="city" placeholder="enter city number" />
+    <button onclick="getWeather(getMap())" >Search</button>
+    
+    <div id="main">
+      <div id="container"></div>
+      <div id="map"></div>
+    </div>
+    <!-- <a href="https://icons8.com/icon/O96jdn3rUsve/windy-weather">Windy Weather icon by Icons8</a> -->
+        </style>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //°min temp, max temp, wind, clounds, sunrise, sunset etc.
+
+  async function getWeather() {
+    try {
+      let city = document.getElementById("city").value;
+      let response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=202d4558422026e86d2235bc6ae89c2f`
+      );
+      let data = await response.json();
+      console.log("data:", data);
+      displayWeather(data);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  
+ 
+  function getMap(data) {
+   
+    let city = document.getElementById("city").value;
+     var MM = document.querySelector("#map");
+    MM.innerHTML = `<iframe
+  width="680"
+  height="550"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCprD1apKok2J2ScXlcHGG9Oyck7Pk0SQY
+    &q=${city}">
+</iframe>`
+    
+    
+    // MM.appendChild(mapImg)
+  }
+  function displayWeather(data) {
+    document.querySelector("#container").innerHTML = "";
+    let bigdiv = document.createElement("div");
+    bigdiv.setAttribute("class", "divv");
+    //°min temp, max temp, wind, clouds, sunrise, sunset etc.
+
+    var div1 = document.createElement("div");
+    var minTemp = document.createElement("h2");
+    minTemp.textContent = `Min-Temp : ${data.main.temp_min}`;
+     var minImg = document.createElement("img")
+    minImg.src="https://img.icons8.com/ultraviolet/64/000000/temperature--v1.png"
+    div1.append(minTemp,minImg);
+
+
+    var div2 = document.createElement("div");
+    var maxTemp = document.createElement("h2");
+    maxTemp.textContent = `Max-Temp : ${data.main.temp_max}`;
+     var maxImg = document.createElement("img")
+    maxImg.src="https://img.icons8.com/color/64/000000/temperature--v1.png"
+    div2.append(maxTemp,maxImg);
+
+    var div3 = document.createElement("div");
+    var wind = document.createElement("h2");
+    wind.textContent = `Wind : ${data.wind.deg}`;
+     var windImg = document.createElement("img")
+    windImg.src="https://img.icons8.com/color/64/000000/windy-weather--v2.png"
+    div3.append(wind,windImg);
+
+    var div4 = document.createElement("div");
+    var clouds = document.createElement("h2");
+    clouds.textContent = `Clouds : ${data.clouds.all}`;
+    var cloudImg = document.createElement("img")
+    cloudImg.src="https://img.icons8.com/color/64/000000/microsoft-onedrive-2019.png"
+    div4.append(clouds,cloudImg);
+
+    var div5 = document.createElement("div");
+    var sunRise = document.createElement("h2");
+    sunRise.textContent = `SunRice : ${data.sys.sunrise}`;
+     var riseImg = document.createElement("img")
+    // riseImg.src="https://ownyourweather.com/wp-content/uploads/2019/03/Sunny-Symbols.jpg"
+   riseImg.src="https://img.icons8.com/cute-clipart/64/000000/sunrise.png"
+    div5.append(sunRise,riseImg);
+
+    var div6 = document.createElement("div");
+    var sunSet = document.createElement("h2");
+    sunSet.textContent = `SunSet : ${data.sys.sunset}`;
+     var setImg = document.createElement("img")
+    setImg.src="https://img.icons8.com/color/64/000000/sunset.png"
+    div6.append(sunSet,setImg);
+
+    bigdiv.append(div1,div2,div3,div4,div5,div6);
+    document.querySelector("#container").append(bigdiv);
+  }
+</script>

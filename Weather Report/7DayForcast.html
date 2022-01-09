@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        font-size: 25px;
+        color: blue;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        border: 0px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 10px 20px;
+      }
+      button {
+        margin-left: 20px;
+        border-radius: 15px;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: skyblue;
+        border: transparent;
+        cursor: pointer;
+        padding: 15px 30px;
+      }
+
+      #container > div {
+        margin-top: 80px;
+        /* margin-left: 30px; */
+        box-shadow: rgba(43, 42, 42, 0.35) 0px 5px 15px;
+        width: 190px;
+        height: 260px;
+        border-radius: 20px;
+background-color: rgb(250, 233, 200);
+        text-align: center;
+      }
+      /* #container > .divv>div{
+         border:solid;
+       } */
+      #container {
+        display: flex;
+        gap: 20px;
+      }
+      body{
+       background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271_960_720.jpg");
+    background-size: cover;
+      }
+      h2 {
+        color: tomato;
+      }
+      .inputDiv {
+        margin: auto;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inputDiv">
+      <input type="text" id="city" placeholder="enter city number" />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  //°min temp, max temp, wind, clounds, sunrise, sunset etc.
+
+  async function getWeather() {
+    try {
+      let city = document.getElementById("city").value;
+      let response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=202d4558422026e86d2235bc6ae89c2f`
+      );
+
+      let data = await response.json();
+      console.log("data:", data.coord.lon, data.coord.lat);
+      let coordinate =
+        await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&units=metric
+&exclude=&appid=202d4558422026e86d2235bc6ae89c2f`);
+
+      let coordData = await coordinate.json();
+      console.log("coordData:", coordData.daily);
+      displayWeather(coordData.daily);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  // document.querySelector("#container").innerHTML = "";
+
+  function displayWeather(data) {
+    var week = ["Mon", "Tues", "Wed", "Thrus", "Fri", "Sat", "Sun", "Mon"];
+
+    data.forEach(function (el, i) {
+      let bigdiv = document.createElement("div");
+      bigdiv.setAttribute("class", "divv");
+
+      var day = document.createElement("h1");
+      day.textContent = week[i];
+      day.style.color = "maroon";
+
+      var imgDiv = document.createElement("div");
+      var weather_stutus = document.createElement("p");
+      weather_stutus.textContent = el.weather[0].main;
+
+      if (weather_stutus.textContent === "Clear") {
+        var day_stutus = document.createElement("img");
+        day_stutus.src = "https://img.icons8.com/emoji/66/000000/sun-emoji";
+
+        imgDiv.append(day_stutus);
+      }
+      if (weather_stutus.textContent === "Snow") {
+        var day_stutus = document.createElement("img");
+        day_stutus.src = "https://img.icons8.com/fluency/66/000000/snow.png";
+        imgDiv.append(day_stutus);
+      }
+      if (weather_stutus.textContent === "Clouds") {
+        var day_stutus = document.createElement("img");
+        day_stutus.src = "https://img.icons8.com/fluency/66/000000/cloud.png";
+        imgDiv.append(day_stutus);
+      }
+      if (weather_stutus.textContent === "Rain") {
+        var day_stutus = document.createElement("img");
+        day_stutus.src =
+          "https://img.icons8.com/fluency/66/000000/heavy-rain.png";
+        imgDiv.append(day_stutus);
+      }
+
+      var minTemp = document.createElement("h2");
+      minTemp.textContent = `${el.temp.min}°`;
+
+      var maxTemp = document.createElement("h2");
+      maxTemp.textContent = `${el.temp.max}°`;
+
+      bigdiv.append(day, imgDiv, minTemp, maxTemp);
+
+      document.querySelector("#container").append(bigdiv);
+    });
+  }
+</script>
