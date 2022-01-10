@@ -28,7 +28,7 @@ function displayData(data,location) {
        var menuArea = document.createElement("p");
       menuArea.textContent = strArea;
       var menuPrice = document.createElement("p");
-      menuPrice.textContent = Math.floor(Math.random() * 500) + 200;
+      menuPrice.textContent = `₹${Math.floor(Math.random() * 500) + 200}/-`;
       secondDiv.append(menuArea, menuPrice);
 
        var menuTags = document.createElement("p");

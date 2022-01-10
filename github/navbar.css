@@ -1,0 +1,87 @@
+body {
+  margin: 0px;
+  background-color: hsl(216, 27%, 7%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+#navbar {
+  display: flex;
+  background-color: hsl(215, 21%, 10%);
+  color: white;
+  height: 70px;
+  font-size: 20px;
+}
+input {
+  background-color: hsl(216, 27%, 7%);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  width: 400px;
+  border: 1px solid gray;
+  color: white;
+}
+
+#logo img {
+  width: 60%;
+  padding: 9px;
+  border-radius: 50%;
+  border: 0px;
+}
+button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+  border: 0px;
+  cursor: pointer;
+  border-bottom: 1px solid gray;
+  margin-left: 20px;
+}
+
+#profile-img {
+  width: 40%;
+  border-radius: 50%;
+  
+}
+
+#list li {
+  display: inline;
+  margin-right: 2%;
+}
+#search {
+  width: 23%;
+  padding: 12px;
+}
+
+#logo {
+  width: 5%;
+  text-align: right;
+}
+#options {
+  width: 65%;
+}
+#profile > img {
+  margin-top: 13px;
+  width: 100%;
+}
+#profile {
+  width: 3%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#repo {
+  color: rgb(115, 159, 241);
+}
+#repo > div {
+  border-bottom: 1px solid grey;
+  height: 80px;
+  margin-left: 280px;
+  margin-top: 60px;
+  width: 60%;
+}
+#repo > div > h1 {
+  padding-left: 50px;
+  cursor: pointer;
+}

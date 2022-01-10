@@ -28,7 +28,7 @@ function search_data(data, left, right) {
   var menuArea = document.createElement("p");
   menuArea.textContent = data.strArea;
   var menuPrice = document.createElement("p");
-  menuPrice.textContent = Math.floor(Math.random() * 500) + 200;
+  menuPrice.textContent = `₹${Math.floor(Math.random() * 500) + 200}/-`;
   secondDiv.append(menuArea, menuPrice);
 
   var thirdDiv = document.createElement("div");
