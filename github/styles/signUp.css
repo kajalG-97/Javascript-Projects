@@ -1,0 +1,58 @@
+body {
+  background-color: hsl(221, 78%, 7%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+#head {
+  display: flex;
+  color: darkslateblue;
+  justify-content: space-between;
+  font-size: 23px;
+  margin: auto;
+  width: 96%;
+}
+a {
+  color: skyblue;
+}
+#mid {
+  width: 25%;
+  color: skyblue;
+  font-size: 20px;
+  margin: auto;
+}
+form {
+  width: 95%;
+  margin: auto;
+
+  font-size: 20px;
+}
+input {
+  background-color: transparent;
+  /* background-color: hsl(216, 27%, 7%); */
+  color: white;
+  font-size: 18px;
+  border: 0px;
+  /* border: 1px solid rgb(56, 56, 56); */
+  border-bottom: 1px solid skyblue;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  padding: 9px 98px 9px 9px;
+}
+input:focus {
+  outline: 0px;
+}
+.submit {
+  border-radius: 15px;
+  padding: 10px 30px;
+  background-color: rgb(33, 156, 33);
+  border: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+p > span {
+  margin-left: 8px;
+}
+h1 {
+  color: white;
+}

@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar Document</title>
-    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
   </head>
   <body>
     <div id="container"></div>
     <div id="main">
-
       <button id="repobtn">Get user data</button>
     </div>
     <div id="repo"></div>
@@ -39,12 +38,11 @@
     }
   }
   let show_repo = document.querySelector("#repo");
-  import {displayRepo} from "./components/repo.js";
+  import { displayRepo } from "./components/repo.js";
   async function getUserRepo() {
     let res = await fetch(response.repos_url);
     let repo_data = await res.json();
     console.log("repo_data", repo_data);
-    displayRepo(repo_data,show_repo);
+    displayRepo(repo_data, show_repo);
   }
-
 </script>
