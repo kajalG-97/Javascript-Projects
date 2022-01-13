@@ -1,5 +1,5 @@
 
-  async function Register() {
+  async function Register(event) {
     try {
       event.preventDefault();
       var register_data = {

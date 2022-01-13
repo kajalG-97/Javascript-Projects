@@ -1,6 +1,6 @@
 
   // login = https://masai-api-mocker.herokuapp.com/auth/login
-  async function login() {
+  async function login(event) {
     event.preventDefault();
     setTimeout(function () {
       alert("Invalid login ID or Password");
