@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/signin.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="logodiv">
+        <p>Sign In</p>
+      </div>
+      <div id="indiv">
+        <form onsubmit="login(event)">
+          <label for="username">Username or email address</label><br />
+
+          <input type="text" id="user" />
+          <br />
+          <br />
+          <label for="password">Password</label>
+          <br />
+          <input type="password" id="pass" /><br />
+          <input type="submit" id="sub" value="Sign in" />
+        </form>
+      </div>
+      <div id="lastdiv">
+        <p>
+          New User
+          <span> <a href="signUp.html">Create an account</a></span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="scripts/signin.js"></script>

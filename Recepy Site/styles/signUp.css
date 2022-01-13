@@ -1,0 +1,77 @@
+#main {
+  width: 35%;
+  padding-top: 30px;
+  border-radius: 10px;
+  /* border:solid red; */
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+#head {
+  font-size: 23px;
+  text-align: center;
+  width: 96%;
+}
+#head > p {
+  /* color: rgb(43, 23, 170); */
+  color: rgb(255, 0, 106);
+}
+a {
+  color: rgb(6, 126, 182);
+}
+#mid > form > h1 {
+  color: rgb(255, 0, 106);
+}
+#mid {
+  width: 80%;
+
+  color: rgb(60, 5, 105);
+  font-size: 20px;
+  margin: auto;
+  /* border:solid red; */
+}
+form {
+  width: 95%;
+  margin: auto;
+
+  font-size: 20px;
+}
+input {
+  background-color: transparent;
+  /* background-color: hsl(216, 27%, 7%); */
+
+  font-size: 18px;
+  border: 0px;
+  /* border: 1px solid rgb(56, 56, 56); */
+  border-bottom: 1px solid rgb(2, 41, 56);
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  padding: 9px 118px 9px 9px;
+}
+input:focus {
+  outline: 0px;
+}
+.submit {
+  border-radius: 15px;
+  padding: 10px 80px;
+  background-color: hsl(354, 83%, 62%);
+  border: 0px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+.submit:hover {
+  background-color: rgb(236, 56, 74);
+  cursor: pointer;
+}
+p > span {
+  margin-left: 8px;
+}
+/* h1 {
+  color: white;
+} */
