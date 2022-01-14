@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="styles/home.css">
+  </head>
+  <body>
+    <div id="main">
+     <div id="container">
+      <div id="searchOption"></div>
+    </div>
+    </div>
+    <div id="blog">
+      <div id="head">
+        <div id="cartIcon"><img src="https://img.icons8.com/external-justicon-flat-justicon/64/000000/external-cart-ecommerce-justicon-flat-justicon.png"/>
+        <h2>0</h2></div>
+      </div>
+      <div id="cartDiv">
+        
+      </div>
+      <div id="bottom">
+        <div>
+          <h2 id="subTotal">Subtotal</h2>
+          <h3 id="totalPay">00</h3>
+        </div>
+
+        <div>
+          <button id="paymentButton">PROCEED TO PAYMENT</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="scripts/cart.js"></script>
+<script type="module">
+  import navbar from "./components/home.js";
+  console.log("navbar", navbar);
+  let container = document.getElementById("container");
+  container.innerHTML = navbar();
+  </script>

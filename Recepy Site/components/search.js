@@ -36,7 +36,7 @@ function search_data(data, left, right) {
   menuTags.textContent = data.strTags;
   // menuTags.style.color = "green"
   var menuButton = document.createElement("button");
-  menuButton.textContent = "more details -->";
+  menuButton.textContent = "more details";
   thirdDiv.append(menuButton, menuTags);
   menuButton.addEventListener("click", showMoreInfo);
   function showMoreInfo() {

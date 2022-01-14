@@ -116,6 +116,14 @@ input {
   width: 90%;
   margin: auto;
 }
+#recepy_div > div > div > button {
+  background-color: rgb(0, 187, 0);
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+  border: 0px;
+}
 #recepy_div > div:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -193,9 +201,11 @@ h2 {
 #searching > #left > div > div > button {
   background-color: rgb(16, 131, 16);
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 15px;
   border: 0px;
+  height: 40px;
+  padding: 0px 20px;
 }
 #searching > #left:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

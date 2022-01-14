@@ -30,26 +30,34 @@ function displayData(data,location) {
       var menuPrice = document.createElement("p");
       menuPrice.textContent = Math.floor(Math.random() * 500) + 200;
       secondDiv.append(menuArea, menuPrice);
-
+      var thirddiv = document.createElement("div");
+      
        var menuTags = document.createElement("p");
       menuTags.textContent = strTags;
       
       var menuButton = document.createElement("button");
-      menuButton.textContent = "more details -->";
-        menuButton.addEventListener("click", showMoreInfo);
-      menu_div.append(menuImg,firstDiv,secondDiv,menuTags );
+      menuButton.textContent = "ADD+";
+      // menuButton.addEventListener("click", AddtoCart);
+      thirddiv.append(menuTags,menuButton)
+      menu_div.append(menuImg,firstDiv,secondDiv,thirddiv);
 
       location.append(menu_div);
         
     })
 }
-let showMoreInfo = () => {
+// let AddtoCart = () => {
     
-    var info_div = document.createElement("div");
-    let list = document.createElement("ol");
-    let listNum = document.createElement("li")
+    
+//         var obj = {
+//           strMealThumb,
+//           strMeal,
+        
+//         }
 
-}
+//         arr.push(obj);
+//         localStorage.setItem("AddCartData", JSON.stringify(arr));
+      
+// }
 let displaySearchList = (data,location) => {
     if (data === undefined) {
       return false;

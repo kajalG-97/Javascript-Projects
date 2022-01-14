@@ -1,0 +1,95 @@
+
+a:active {
+  color: pink;
+}
+a:link {
+  color: thistle;
+}
+a:visited {
+  color: yellowgreen;
+}
+a {
+  margin-top: 20px;
+  text-decoration: none;
+}
+#head {
+  height: 60px;
+  width: 46%;
+  margin: auto;
+  margin-top: 20px;
+}
+#head > div {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+
+  margin-left: 20px;
+}
+#bottom {
+  height: 120px;
+  width: 46%;
+  /* border:solid; */
+  margin: auto;
+  margin-top: 2px;
+}
+#bottom > div:nth-child(1) {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  /* border:solid red; */
+  height: 70px;
+  margin-top: -20px;
+}
+#bottom > div:nth-child(2) > button {
+  font-size: 20px;
+  padding: 14px 70px;
+  border: 0px;
+  border-radius: 15px;
+  background-color: rgb(18, 2, 36);
+  color: white;
+}
+#bottom > div:nth-child(2) {
+  margin: auto;
+  width: 50%;
+}
+#cartDiv {
+  width: 46%;
+  margin: auto;
+  height: 550px;
+  /* border:solid red; */
+  
+margin-top: 3px;
+  overflow-y: auto;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  
+}
+#cartDiv > div {
+  width: 90%;
+  display: flex;
+  /* border:solid green; */
+  margin-top: 30px;
+  margin-left: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#cartDiv > div > h2 {
+  margin-top: 9%;
+  margin-right: 60px;
+  margin-left: 20px;
+}
+#cartDiv > div > button {
+  background-color: rgb(10, 146, 10);
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  border: 0px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin-top: 9%;
+}
+#cartDiv > div > img {
+  width: 40%;
+  margin-left: 30px;
+}
