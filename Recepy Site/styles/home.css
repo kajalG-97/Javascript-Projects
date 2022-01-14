@@ -106,7 +106,7 @@ input {
   color: rgb(88, 88, 88);
   font-family: cursive;
   font-size: 20px;
-  cursor: pointer;
+  
 }
 #recepy_div > div > div {
   /* border:solid green; */
@@ -187,7 +187,7 @@ h2 {
   color: rgb(88, 88, 88);
   font-family: cursive;
   font-size: 20px;
-  cursor: pointer;
+  
   /* border: solid red; */
 }
 #searching > #left > div > div {
@@ -206,6 +206,7 @@ h2 {
   border: 0px;
   height: 40px;
   padding: 0px 20px;
+  cursor: pointer;
 }
 #searching > #left:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
