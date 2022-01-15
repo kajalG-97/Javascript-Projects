@@ -11,7 +11,8 @@ async function getdata(url) {
     }
 }
 
-function displayData(data,location) {
+function displayData(data, location) {
+  var arr = [];
     data.map(({strMealThumb,strMeal,strArea,strTags,strCategory}) =>{
         var menu_div = document.createElement("div");
 
@@ -28,7 +29,7 @@ function displayData(data,location) {
        var menuArea = document.createElement("p");
       menuArea.textContent = strArea;
       var menuPrice = document.createElement("p");
-      menuPrice.textContent =`₹${Math.floor(Math.random() * 500) + 100}/-`;
+      menuPrice.textContent =Math.floor(Math.random() * 500) + 100;
       secondDiv.append(menuArea, menuPrice);
       var thirddiv = document.createElement("div");
       
@@ -37,7 +38,20 @@ function displayData(data,location) {
       
       var menuButton = document.createElement("button");
       menuButton.textContent = "ADD+";
-      // menuButton.addEventListener("click", AddtoCart);
+      let AddtoCart = () => {
+    
+    
+        var obj = {
+         menuImg:menuImg.src,
+          menuName:menuName.textContent,
+        menuPrice:menuPrice.textContent,
+        }
+
+        arr.push(obj);
+        localStorage.setItem("AddCartData", JSON.stringify(arr));
+      
+      }
+      menuButton.addEventListener("click", AddtoCart);
       thirddiv.append(menuTags,menuButton)
       menu_div.append(menuImg,firstDiv,secondDiv,thirddiv);
 
@@ -45,19 +59,7 @@ function displayData(data,location) {
         
     })
 }
-// let AddtoCart = () => {
-    
-    
-//         var obj = {
-//           strMealThumb,
-//           strMeal,
-        
-//         }
 
-//         arr.push(obj);
-//         localStorage.setItem("AddCartData", JSON.stringify(arr));
-      
-// }
 let displaySearchList = (data,location) => {
     if (data === undefined) {
       return false;

@@ -1,17 +1,13 @@
+#option {
+  margin-top: 32px;
+  border-radius: 15px;
+  overflow-y: scroll;
+  background-color: white;
+  height: 500px;
+  display: none;
+}
 
-a:active {
-  color: pink;
-}
-a:link {
-  color: thistle;
-}
-a:visited {
-  color: yellowgreen;
-}
-a {
-  margin-top: 20px;
-  text-decoration: none;
-}
+
 #head {
   height: 60px;
   width: 46%;
@@ -56,13 +52,10 @@ a {
   width: 46%;
   margin: auto;
   height: 550px;
-  /* border:solid red; */
-  
-margin-top: 3px;
+  margin-top: 3px;
   overflow-y: auto;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
-  
 }
 #cartDiv > div {
   width: 90%;
@@ -73,10 +66,16 @@ margin-top: 3px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#cartDiv > div > h2 {
+#cartDiv > div > div >h2 {
   margin-top: 9%;
   margin-right: 60px;
   margin-left: 20px;
+  
+}
+#cartDiv > div > div {
+  height:90px;
+  margin-top: 25%;
+  
 }
 #cartDiv > div > button {
   background-color: rgb(10, 146, 10);
@@ -87,7 +86,8 @@ margin-top: 3px;
   cursor: pointer;
   width: 100px;
   height: 40px;
-  margin-top: 9%;
+  margin-top: 29%;
+  margin-left: 30px;
 }
 #cartDiv > div > img {
   width: 40%;
