@@ -1,7 +1,7 @@
 .nav {
   height: 100px;
   border: 1px solid red;
-  align-content: center;
+  /* align-content: center; */
 
   display: flex;
 
@@ -27,6 +27,26 @@
 }
 .id {
   display: grid;
-  align-content: center;
+  /* align-content: center; */
   grid-template-columns: repeat(2, 1fr);
+}
+#option{
+    border:solid purple;
+    width:400px;
+    height:400px;
+    background-color: black;
+    color: white;
+    /* margin-top: 700px; */
+}
+#option >div{
+    display: flex;
+    overflow-y: scroll;
+}
+#option>div:hover{
+background-color: rgb(70, 69, 69);
+
+}
+#option >div >div:nth-child(2){
+
+    width:50%;
 }

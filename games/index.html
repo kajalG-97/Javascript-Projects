@@ -37,4 +37,56 @@
     .catch((el) => {
       console.log("el", el);
     });
+
+  let input = document.getElementById("searchId");
+  input.addEventListener("input", Searchgame);
+
+  async function Searchgame() {
+    try {
+      var menuValue = input.value;
+      let response = await fetch(
+        `https://api.rawg.io/api/games?key=cab653694f20430d9700315187126e48&search=${menuValue}`
+      );
+      let data = await response.json();
+      console.log("data", data);
+      displaySearch(data.results);
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
+
+  var search_waiting;
+  function debouncer() {
+    if (search_waiting) {
+      clearTimeout(search_waiting);
+    }
+
+    search_waiting = setTimeout(function () {
+      Searchgame(); //Schedule a setTimeout after delay seconds
+    }, 1000);
+  }
+  let displaySearch = (data) => {
+
+    var option = document.querySelector("#option");
+    option.innerHTML= "";
+    data.map(({ name, background_image }) => {
+      var div1 = document.createElement("div");
+      var title = document.createElement("h1");
+      title.textContent = name;
+
+      div1.append(name);
+      var div2 = document.createElement("div");
+      var image = document.createElement("img");
+        image.src = background_image;
+        div2.append(image);
+        var div = document.createElement("div");
+        div.append(div1,div2);
+       div.addEventListener("click", letsSee);
+      function letsSee() {
+        localStorage.setItem("GameData", JSON.stringify(name));
+        window.location.href = "search.html";
+      }
+      option.append(div);
+    });
+  };
 </script>
