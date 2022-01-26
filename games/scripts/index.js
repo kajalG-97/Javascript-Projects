@@ -10,7 +10,7 @@
 }
 Games();
 function displayGame(data) {
-    var path = document.querySelector("#game");
+    var path = document.querySelector("#grid");
     data.map(({ name, background_image }) => {
         var div = document.createElement("div");
         var title = document.createElement("h2");

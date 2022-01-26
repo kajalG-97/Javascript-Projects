@@ -1,57 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        .nav{
-            height: 100px;
-            border: 1px solid red;
-            align-content: center;
-            
-            display: flex;
-            
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .nav>div{
-            border: 1px solid blue;
-        }
-        .name{
-            align-content: center;
-            display: ;
-            width: 100px;
-            height: 20px;
-            border: 1px solid black;
-        }
-        .search{
-            width: 70%;
-        }
-        .search>input{
-            width: 100%;
-            padding: 20px 0px;
-        }
-        .id{
-            display: grid;
-            align-content: center;
-            grid-template-columns: repeat(2,1fr);
-        }
-    </style>
-</head>
-<body>
-    <div class="nav">
-        <div class="name"> <b>R A W G</b> </div>
-        <div class="search">
-            <input type="text" placeholder="Search">
-        </div>
-        <div class="id">
-            <div class="acc">KG</div>
-            <div class="library">My library</div>
-        </div>
-        
-
-    </div>
-</body>
+    <link rel="stylesheet" href="styles/nav.css" />
+  </head>
+  <body>
+    <div class="nav"></div>
+  </body>
 </html>
+<script type="module">
+    var nav = document.querySelector(".nav");
+    import navbar from "./components/nav.js"
+    nav.innerHTML = navbar()
+</script>
