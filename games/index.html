@@ -12,14 +12,29 @@
   <body>
     <div class="nav"></div>
     <div id="game">
-        <div id="sidebar"></div>
-        <div id="grid"></div>
+      <div id="sidebar"></div>
+      <div id="grid"></div>
     </div>
   </body>
 </html>
-<script src="./scripts/index.js"></script>
+
 <script type="module">
   var nav = document.querySelector(".nav");
   import navbar from "./components/nav.js";
   nav.innerHTML = navbar();
+
+  var gamepath = document.querySelector("#grid");
+  import { Games, displayGame } from "./components/index.js";
+  let response = Games(
+    `https://api.rawg.io/api/games?key=cab653694f20430d9700315187126e48&dates=2019-09-01,2019-09-30&platforms=18,1,7`
+  );
+  console.log("response", response);
+  response
+    .then((res) => {
+      console.log("res", res.results);
+      displayGame(res.results, gamepath);
+    })
+    .catch((el) => {
+      console.log("el", el);
+    });
 </script>
