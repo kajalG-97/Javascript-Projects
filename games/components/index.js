@@ -19,11 +19,14 @@ let displayGame = (data,location) => {
     // var path = document.querySelector("#grid");
     data.map(({ name, background_image }) => {
         var div = document.createElement("div");
-        var title = document.createElement("h2");
+        var title = document.createElement("h1");
         title.textContent = name;
         var image = document.createElement("img");
         image.src = background_image;
-        div.append(name, image);
+
+        let moreDiv = document.createElement("div");
+
+        div.append(image,name );
         location.append(div);
     })
 }
