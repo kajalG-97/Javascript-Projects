@@ -26,7 +26,7 @@
   var gamepath = document.querySelector("#grid");
   import { Games, displayGame } from "./components/index.js";
   let response = Games(
-    `https://api.rawg.io/api/games?key=cab653694f20430d9700315187126e48&dates=2019-09-01,2019-09-30&platforms=18,1,7`
+    `https://api.rawg.io/api/games?key=cab653694f20430d9700315187126e48&dates=2020-01-01,2022-01-10&platforms=18,1,7`
   );
   console.log("response", response);
   response
@@ -45,7 +45,7 @@
     try {
       var menuValue = input.value;
       let response = await fetch(
-        `https://api.rawg.io/api/games?key=cab653694f20430d9700315187126e48&search=${menuValue}`
+        `https://api.rawg.io/api/games?key=cab653694f20430d9700315187126e48&search=${menuValue}&dates=2019-09-01,2022-01-10&platforms=18,1,7`
       );
       let data = await response.json();
       console.log("data", data);
