@@ -69,7 +69,7 @@
 
     var option = document.querySelector("#option");
     option.innerHTML= "";
-    data.map(({ name, background_image }) => {
+    data.map(({ name, background_image,id }) => {
       var div1 = document.createElement("div");
       var title = document.createElement("h1");
       title.textContent = name;
@@ -80,10 +80,10 @@
         image.src = background_image;
         div2.append(image);
         var div = document.createElement("div");
-        div.append(div1,div2);
+        div.append(div2,div1);
        div.addEventListener("click", letsSee);
       function letsSee() {
-        localStorage.setItem("GameData", JSON.stringify(name));
+        localStorage.setItem("GameData", JSON.stringify(id));
         window.location.href = "search.html";
       }
       option.append(div);

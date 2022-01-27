@@ -30,13 +30,13 @@
   /* align-content: center; */
   grid-template-columns: repeat(2, 1fr);
 }
-#option{
+/* #option{
     border:solid purple;
     width:400px;
     height:400px;
     background-color: black;
     color: white;
-    /* margin-top: 700px; */
+    
 }
 #option >div{
     display: flex;
@@ -49,4 +49,36 @@ background-color: rgb(70, 69, 69);
 #option >div >div:nth-child(2){
 
     width:50%;
+} */
+/* option div */
+#option {
+  margin-top: 32px;
+  border-radius: 15px;
+  overflow-y: scroll;
+  background-color: white;
+  height: 500px;
+}
+
+#option > div {
+  width: 90%;
+  height: 150px;
+  display: flex;
+
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+#option > div:hover {
+  cursor: pointer;
+  background-color: rgb(241, 243, 248);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#option > div > div> img {
+  width: 150px;
+  border-radius: 10px;
+}
+#option > div > h2 {
+  margin-left: 90px;
+  margin-top: 20px;
 }
