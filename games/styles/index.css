@@ -21,3 +21,12 @@ img{
     border: 1px solid green;
     width:30%;
 }
+.more{
+    display: none;
+}
+.bigdiv:hover  .more {
+    display: inline;
+    cursor: pointer;
+    /* transform: 1s; */
+    
+}
