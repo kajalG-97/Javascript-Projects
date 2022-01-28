@@ -6,21 +6,15 @@ body{
 }
 .nav {
   height: 100px;
-  /* border: 1px solid red; */
-  /* align-content: center; */
   background-color: #151515;
 
   display: flex;
   color: aliceblue;
-  /* border: 1px solid red; */
   flex-wrap: wrap;
   justify-content: space-between;
 
 }
-.nav > div {
-  /* border: 1px solid blue; */
 
-}
 input:focus {
   border: 1px solid rgb(106, 206, 245);
   box-shadow: rgb(0, 0, 255) 0px 0px 0px 2px,
@@ -47,15 +41,12 @@ input{
 }
 .name {
   align-content: center;
-
-  /* width: 130px; */
   font-family: Arial, Helvetica, sans-serif;
   height: 20px;
   margin-top: 30px;
   font-size: 20px;
   margin-left: 30px;
   word-spacing: 15px;
-  /* border: 1px solid black; */
 }
 .search {
   width: 70%;
@@ -134,27 +125,19 @@ input{
           margin-top: 5px;
           width:330%;
           height: 200px;
-          margin-left: -100%;
-          
-          
-          /* border: 1px solid red; */
+          margin-left: -100%;          
         }
 
         #option > div {
           width: 100%;
-          /* height: 150px; */
           display: flex;
           background-color: black;
-
           margin: auto;
           margin-top: -1px;
-          /* border-radius: 15px; */
         }
         #option > div:hover {
           cursor: pointer;
           color: gray;
-          /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
         }
         #option > div > div> img {
           width: 100px;
@@ -167,7 +150,6 @@ input{
           margin-left: 30px;
           font-weight: bold;
 
-          /* margin-top: 20px; */
         }
 
         
