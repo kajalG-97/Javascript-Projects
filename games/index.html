@@ -13,7 +13,14 @@
     <div class="nav"></div>
     <div id="game">
       <div id="sidebar"></div>
-      <div id="grid"></div>
+      <div class="new">
+        <div class="indiv">
+          <h2>New and trending</h2>
+          <p>Based on player counts and release date</p>
+        </div>
+        <div id="grid"></div>
+      </div>
+      
     </div>
   </body>
 </html>
@@ -39,11 +46,28 @@
     });
 
   let input = document.getElementById("searchId");
+  console.log('input', input);
+  
+  
+  
+
   input.addEventListener("input", Searchgame);
 
+  let opt = document.querySelector("#option");
+
+  
+
   async function Searchgame() {
+    
     try {
       var menuValue = input.value;
+      if(menuValue.length<1){
+        console.log(1);
+        window.location.href ="index.html"
+        return false;
+        
+      }
+
       let response = await fetch(
         `https://api.rawg.io/api/games?key=cab653694f20430d9700315187126e48&search=${menuValue}&dates=2019-09-01,2022-01-10&platforms=18,1,7`
       );
@@ -63,13 +87,17 @@
     }
 
     search_waiting = setTimeout(function () {
-      Searchgame(); //Schedule a setTimeout after delay seconds
-    }, 1000);
+      
+        Searchgame()
+       //Schedule a setTimeout after delay seconds
+    }, 2000);
   }
   let displaySearch = (data) => {
+    
 
     var option = document.querySelector("#option");
-    option.innerHTML= "";
+    
+
     data.map(({ name, background_image,id }) => {
       var div1 = document.createElement("div");
       var title = document.createElement("h1");

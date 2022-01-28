@@ -1,21 +1,60 @@
+body{
+  margin: 0px;
+  background-color: #151515;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .nav {
   height: 100px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* align-content: center; */
+  background-color: #151515;
 
   display: flex;
-
+  color: aliceblue;
+  /* border: 1px solid red; */
   flex-wrap: wrap;
   justify-content: space-between;
+
 }
 .nav > div {
   /* border: 1px solid blue; */
+
+}
+input:focus {
+  border: 1px solid rgb(106, 206, 245);
+  box-shadow: rgb(0, 0, 255) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+input:hover{
+  background-color: white;
+  border: 1px solid rgb(106, 206, 245);
+  box-shadow: rgb(0, 0, 255) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+input{
+  background-color: rgb(63, 63, 63);
+  border: 0px;
+  font-size: 20px;
+  border-radius: 25px;
+  margin-top: 25px;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
 }
 .name {
   align-content: center;
 
-  width: 100px;
+  /* width: 130px; */
+  font-family: Arial, Helvetica, sans-serif;
   height: 20px;
+  margin-top: 30px;
+  font-size: 20px;
+  margin-left: 30px;
+  word-spacing: 15px;
   /* border: 1px solid black; */
 }
 .search {
@@ -23,62 +62,169 @@
 }
 .search > input {
   width: 100%;
-  padding: 20px 0px;
+  padding: 10px 0px;
+  padding-left: 20px;
 }
 .id {
   display: grid;
-  /* align-content: center; */
   grid-template-columns: repeat(2, 1fr);
+  margin-right: 20px;
 }
-/* #option{
-    border:solid purple;
-    width:400px;
-    height:400px;
-    background-color: black;
-    color: white;
-    
+.id>div{
+  margin-top: 30px;
+  font-size: 20px;
 }
-#option >div{
-    display: flex;
-    overflow-y: scroll;
+@media only screen and (min-width: 349px) and (max-width:988px) {
+       
+        #sidebar{
+          display: none;
+        }
+        
+        .id {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .id>div{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+       
+        .search{
+            width: 50%;
+        }
+        .name {
+            
+            font-size: 20px;
+        }
+        
+        
+        
 }
-#option>div:hover{
-background-color: rgb(70, 69, 69);
 
-}
-#option >div >div:nth-child(2){
+@media only screen and (max-width:480px) {
 
-    width:50%;
-} */
+        
+        #sidebar{
+          display: none;
+        }
+        
+        .id {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .id>div{
+            margin-top: 30px;
+            font-size: 10px;
+        }
+       
+        .search{
+            width: 30%;
+            margin-left: -30px;
+        }
+        input{
+          height: 20px;
+          font-size: 10px;
+        }
+        .name {
+            
+            font-size: 10px;
+            word-spacing: 10px;
+        } 
+        #option {
+          margin-top: 5px;
+          width:330%;
+          height: 200px;
+          margin-left: -100%;
+          
+          
+          /* border: 1px solid red; */
+        }
+
+        #option > div {
+          width: 100%;
+          /* height: 150px; */
+          display: flex;
+          background-color: black;
+
+          margin: auto;
+          margin-top: -1px;
+          /* border-radius: 15px; */
+        }
+        #option > div:hover {
+          cursor: pointer;
+          color: gray;
+          /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+        }
+        #option > div > div> img {
+          width: 100px;
+          border-radius: 10px;
+          margin-left: 10px;
+        }
+        #option > div > h2 {
+          margin-left: 90px;
+          font-family: Arial, Helvetica, sans-serif;
+          margin-left: 30px;
+          font-weight: bold;
+
+          /* margin-top: 20px; */
+        }
+
+        
+}
 /* option div */
 #option {
-  margin-top: 32px;
+  margin-top: 5px;
   border-radius: 15px;
-  overflow-y: scroll;
-  background-color: white;
+  overflow-y: auto;
+  background-color:transparent;
+
   height: 500px;
+  
+  /* border: 1px solid red; */
 }
 
 #option > div {
-  width: 90%;
-  height: 150px;
+  width: 100%;
+  /* height: 150px; */
   display: flex;
+  background-color: black;
 
   margin: auto;
-  margin-top: 10px;
-  border-radius: 15px;
+  margin-top: -1px;
+  /* border-radius: 15px; */
 }
 #option > div:hover {
   cursor: pointer;
-  background-color: rgb(241, 243, 248);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  color: gray;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
 }
 #option > div > div> img {
-  width: 150px;
+  width: 100px;
   border-radius: 10px;
+  margin-left: 10px;
 }
 #option > div > h2 {
   margin-left: 90px;
-  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
+  font-weight: bold;
+
+  /* margin-top: 20px; */
+}
+/* scroll */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #adabab;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4c4c;
 }
