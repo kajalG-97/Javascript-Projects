@@ -115,21 +115,9 @@ img{
 }
 .indiv>p{
     margin-top: 5px;
-    /* border: 1px solid red; */
-}
-/* #grid>div{
-    border: 1px solid red;
-}
-#grid>div:hover{
-    display: inline;
-    border: 1px solid blue;
-
-} */
-/* .bigdiv:hover div {
-    display: inline;
-    cursor: pointer;
-    height: fit-content;
-
     
-    
-} */
+}
+#grid > div>div {
+border: 1px solid red;
+}
+
