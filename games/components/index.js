@@ -20,13 +20,18 @@ let displayGame = (data,location) => {
     data.map(({ name, background_image,released }) => {
         var div = document.createElement("div");
         div.setAttribute("class","bigdiv")
+
+        var namediv = document.createElement("div")
         var title = document.createElement("h1");
         title.textContent = name;
+        
         var image = document.createElement("img");
         image.src = background_image;
 
         let but = document.createElement("button");
         but.innerHTML="More"
+
+        namediv.append(title,but)
 
         but.addEventListener("click",more);
 
@@ -45,7 +50,7 @@ let displayGame = (data,location) => {
         }
 
         moreDiv.append(date)
-        div.append(image,name,but,moreDiv);
+        div.append(image,namediv,moreDiv);
         location.append(div);
     })
 }

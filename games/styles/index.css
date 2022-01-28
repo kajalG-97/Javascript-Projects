@@ -23,7 +23,14 @@ img{
 }
 #grid>div{
     width:30%;
+    background-color:#202020;
+    border-radius: 15px;
+    height: fit-content;
 }
+#grid>div>img{
+    border-radius: 15px 15px 0px 0px;
+}
+
 @media only screen and (min-width: 349px) and (max-width:988px) {
         
         #grid{
@@ -105,10 +112,10 @@ img{
     display: none;
     transition:1s ease-in;
     height:fit-content;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-.indiv>h1{
+.indiv>h2{
     font-size: 90px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -117,7 +124,11 @@ img{
     margin-top: 5px;
     
 }
-#grid > div>div {
-border: 1px solid red;
+#grid>div>div{
+    /* border: 1px solid red; */
+    padding: 0px 15px 5px 15px;
+    margin-bottom: 0px;
+
 }
+
 
