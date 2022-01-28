@@ -8,25 +8,38 @@ img{
 }
 #sidebar{
     flex:1;
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 #grid{
     flex:4;
     display: flex;
     flex-wrap: wrap;
-    border:1px solid blue;
+    /* border:1px solid blue; */
     gap: 20px;
 }
 #grid>div{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width:30%;
 }
 .more{
     display: none;
+    transition:1s ease-in;
+    height:fit-content;
+    border: 1px solid red;
 }
-.bigdiv:hover  .more {
+/* #grid>div{
+    border: 1px solid red;
+}
+#grid>div:hover{
+    display: inline;
+    border: 1px solid blue;
+
+} */
+/* .bigdiv:hover div {
     display: inline;
     cursor: pointer;
-    /* transform: 1s; */
+    height: fit-content;
+
     
-}
+    
+} */

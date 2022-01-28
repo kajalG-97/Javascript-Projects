@@ -25,15 +25,27 @@ let displayGame = (data,location) => {
         var image = document.createElement("img");
         image.src = background_image;
 
+        let but = document.createElement("button");
+        but.innerHTML="More"
+
+        but.addEventListener("click",more);
+
+        
+
         let moreDiv = document.createElement("div");
-        // moreDiv.style.display = "none"
+        moreDiv.style.display = "none"
         moreDiv.setAttribute("class","more")
 
         let date = document.createElement("h2")
         date.innerHTML = released;
 
+        function more(){
+            moreDiv.style.display = "inline"
+            but.textContent = "Less"
+        }
+
         moreDiv.append(date)
-        div.append(image,name,moreDiv);
+        div.append(image,name,but,moreDiv);
         location.append(div);
     })
 }
