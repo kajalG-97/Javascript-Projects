@@ -44,14 +44,7 @@ img{
             margin-top: 30px;
         }
         
-        .id {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .id>div{
-            margin-top: 30px;
-            font-size: 20px;
-        }
+        
      
         .search{
             width: 50%;
@@ -60,7 +53,7 @@ img{
         
         .indiv>h2{
            
-            font-size: 40px;
+            font-size: 20px;
             margin-top: 0px;
             margin-bottom: 0px;
             padding-left: 30px;
@@ -83,14 +76,8 @@ img{
             margin-top: 30px;
         }
         
-        .id {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .id>div{
-            margin-top: 30px;
-            font-size: 20px;
-        }
+        
+        
      
         .search{
             width: 50%; 
