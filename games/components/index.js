@@ -38,18 +38,43 @@ let displayGame = (data,location) => {
         
 
         let moreDiv = document.createElement("div");
+
         moreDiv.style.display = "none"
         moreDiv.setAttribute("class","more")
 
+        let releasetxt = document.createElement("p");
+        releasetxt.style.margin = "0"
+        
+        releasetxt.innerHTML="Release date:"
+
         let date = document.createElement("h2")
         date.innerHTML = released;
+        // date.style.border = "solid red"
+        date.style.margin = "0"
 
-        function more(){
-            moreDiv.style.display = "inline"
-            but.textContent = "Less"
+        but.addEventListener("click",more);
+
+        function more() {
+            if(but.value=='More'){
+                
+                moreDiv.style.display = 'none';
+                but.value = 'Less';
+            }else{
+                but.value = 'More';
+                moreDiv.style.display = 'inline';
+            }
         }
+        // function more(){
+        //     moreDiv.style.display = "flex"
+        //     // moreDiv.style.background="yellow"
+        //     but.textContent = "Less"
+            
 
-        moreDiv.append(date)
+        //     // moreDiv.border = "solid"
+        // }
+
+
+        moreDiv.append(releasetxt,date)
         div.append(image,namediv,moreDiv);
         location.append(div);
     })

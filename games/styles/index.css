@@ -26,6 +26,7 @@ img{
     background-color:#202020;
     border-radius: 15px;
     height: fit-content;
+    transition:1s ease-in;
 }
 #grid>div>img{
     border-radius: 15px 15px 0px 0px;
@@ -97,8 +98,8 @@ img{
 } 
 .more{
     display: none;
-    transition:1s ease-in;
-    height:fit-content;
+    
+    /* height:fit-content; */
     /* border: 1px solid red; */
 }
 
@@ -116,6 +117,16 @@ img{
     padding: 0px 15px 5px 15px;
     margin-bottom: 0px;
 
+
 }
+
+.more{
+    /* background-color: red; */
+    justify-content: space-between;
+    text-align: center;
+    height: fit-content;
+     border: 1px solid red;
+}
+
 
 
