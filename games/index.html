@@ -12,7 +12,9 @@
   <body>
     <div class="nav"></div>
     <div id="game">
-      <div id="sidebar"></div>
+      <div id="sidebar">
+        
+      </div>
       <div class="new">
         <div class="indiv">
           <h2>New and trending</h2>
@@ -27,9 +29,10 @@
 
 <script type="module">
   var nav = document.querySelector(".nav");
-  import navbar from "./components/nav.js";
+  let side = document.querySelector("#sidebar");
+  import {navbar,sidebar} from "./components/nav.js";
   nav.innerHTML = navbar();
-
+  side.innerHTML =  sidebar();
   var gamepath = document.querySelector("#grid");
   import { Games, displayGame } from "./components/index.js";
   let response = Games(

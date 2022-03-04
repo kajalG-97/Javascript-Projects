@@ -8,6 +8,7 @@ img{
 }
 #sidebar{
     flex:1;
+    padding-left: 30px;
     /* border:1px solid red; */
 }
 .new{
@@ -61,7 +62,10 @@ img{
         }
         .indiv>p{
             padding-left: 30px;
-        }        
+        }   
+        #sidebar{
+            display:none;
+        }     
         
 }
 
@@ -94,6 +98,9 @@ img{
         .indiv>p{
             padding-left: 30px;
         } 
+        #sidebar{
+            display:none;
+        }  
         
 } 
 .more{
@@ -113,7 +120,6 @@ img{
     
 }
 #grid>div>div{
-    /* border: 1px solid red; */
     padding: 0px 15px 5px 15px;
     margin-bottom: 0px;
 
@@ -121,12 +127,20 @@ img{
 }
 
 .more{
-    /* background-color: red; */
-    justify-content: space-between;
-    text-align: center;
     height: fit-content;
-     border: 1px solid red;
+    display: flex;
+    align-items: flex-end;
+    font-size:15px;
+
 }
+
+.more>h5{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding:5px 15px 5px 10px;
+}
+
 
 
 

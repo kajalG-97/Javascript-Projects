@@ -17,7 +17,7 @@ async function Games(url) {
 
 let displayGame = (data,location) => {
     // var path = document.querySelector("#grid");
-    data.map(({ name, background_image,released }) => {
+    data.map(({ name, background_image,released ,genres}) => {
         var div = document.createElement("div");
         div.setAttribute("class","bigdiv")
 
@@ -33,24 +33,32 @@ let displayGame = (data,location) => {
 
         namediv.append(title,but)
 
-        but.addEventListener("click",more);
-
-        
+        but.addEventListener("click",more);  
 
         let moreDiv = document.createElement("div");
-
         moreDiv.style.display = "none"
         moreDiv.setAttribute("class","more")
 
-        let releasetxt = document.createElement("p");
+        let releasetxt = document.createElement("h5");
         releasetxt.style.margin = "0"
-        
-        releasetxt.innerHTML="Release date:"
+        releasetxt.innerHTML=`Release date:`
 
-        let date = document.createElement("h2")
-        date.innerHTML = released;
-        // date.style.border = "solid red"
-        date.style.margin = "0"
+        let span = document.createElement("span")
+        span.innerHTML = released
+        releasetxt.append(span)
+
+
+        let gentxt = document.createElement("h5");
+        gentxt.style.margin = "0"
+        gentxt.innerHTML=`genres:`
+
+        let genspan = document.createElement("span")
+        let arr = []
+        genres.map((ele)=>{
+            arr.push(ele.name)
+        })
+        genspan.innerHTML = arr
+        gentxt.append(genspan)
 
         but.addEventListener("click",more);
 
@@ -64,17 +72,9 @@ let displayGame = (data,location) => {
                 moreDiv.style.display = 'inline';
             }
         }
-        // function more(){
-        //     moreDiv.style.display = "flex"
-        //     // moreDiv.style.background="yellow"
-        //     but.textContent = "Less"
-            
 
-        //     // moreDiv.border = "solid"
-        // }
+        moreDiv.append(releasetxt,gentxt)
 
-
-        moreDiv.append(releasetxt,date)
         div.append(image,namediv,moreDiv);
         location.append(div);
     })
