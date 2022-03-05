@@ -29,11 +29,10 @@ let displayGame = (data,location) => {
         image.src = background_image;
 
         let but = document.createElement("button");
+        but.setAttribute("class","button")
         but.innerHTML="More"
 
-        namediv.append(title,but)
-
-        but.addEventListener("click",more);  
+        namediv.append(title,but);  
 
         let moreDiv = document.createElement("div");
         moreDiv.style.display = "none"
