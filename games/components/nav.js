@@ -9,4 +9,8 @@ function navbar() {
             <div class="library">My library</div>
         </div>`
 }
-export default navbar;
+function sidebar(){
+    return `<h2 href="index.html">Home</h2>
+    <h2>Rewies</h2>`
+}
+export  {navbar,sidebar};
