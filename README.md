@@ -16,7 +16,7 @@
 
 # Movies
 
-# https://https://mac-github.netlify.app/
+# https://mac-github.netlify.app/
 
 # One day Weather
 # https://inspiring-goldwasser-153cdc.netlify.app
